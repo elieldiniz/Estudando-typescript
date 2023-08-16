@@ -39,7 +39,7 @@ function findPlanet(name) {
     const planet = planets.find(planet => planet.name === name);
     // Utilizando o operador nullish coalescing podemos
     // garantir que nosso retorno será um tipo Union
-    return planet !== null && planet !== void 0 ? planet : false;
+    return planet ?? false;
 }
 // Graças ao Alias a anotação de tipos nos
 // argumentos da função fica bem mais enxuta
